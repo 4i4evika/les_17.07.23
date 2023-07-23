@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }}
+{% endblock %}
+
+
+{% block content %}
+{{ super() }}
+<hr>
+<h3>У нас большое количество услуг направленных на поддержание вашей красоты и уходу</h3>
+<ul>
+    {% for post in posts %}
+    <li>
+        <p class="title">{{ post.title }}</p>
+            <div class="re">{{ post.text }}</div>
+            <div class="re">{{ post.price }}</div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
